@@ -1,5 +1,5 @@
 import React from 'react';
-import './assets/styles/main.scss'
+import './assets/styles/global.scss'
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import HomePage from './Pages/HomePage/HomePage.tsx';
 import Contact from "./components/Contact/Contact.tsx";
