@@ -1,0 +1,12 @@
+.contact {
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:center;
+    color: #e7a9f1;
+
+    &_img:hover  {
+        color: aqua;
+        box-shadow: 5px 8px 13px rgba(200, 21, 206, 0.77);
+    }
+}

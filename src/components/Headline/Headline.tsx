@@ -11,12 +11,11 @@ function Headline(props: any) {
             fontFamily: customFont,
             textTransform: 'uppercase',
             color: 'transparent',
-            textShadow: '5px 8px 13px rgba(200, 21, 206, 0.77);',
+            textShadow: '5px 8px 13px rgba(200, 21, 206, 0.77)',
             WebkitTextStroke: '2px rgb(207 107 232)',
             fontSize: fontSize,
             fontWeight: '700',
             textAlign: 'center',
-            zIndex:99
         }}>
             {children}
         </Typography>

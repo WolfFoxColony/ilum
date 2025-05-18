@@ -1,6 +1,7 @@
 @use "./variables" as *;
 
-.word-space-normal {
-  font-family: 'Death Star', sans-serif;
-  word-spacing: 5px;
+.font-primary {
+  font-family: 'Rowdies', sans-serif;
+  word-spacing: 10px;
+  letter-spacing: 0.5px;
 }

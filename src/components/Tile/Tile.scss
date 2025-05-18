@@ -1,0 +1,26 @@
+.tile {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+
+    &-box {
+        padding: 20px;
+        border: 1px solid #CEB7FF;
+        background-color: rgba(0, 0, 0, 0.2);
+        color: transparent;
+        -webkit-text-stroke: 1px #e7a9f1;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+
+        &:hover, &.tile-anchor:hover {
+            box-shadow: 10px 5px 11px rgba(200, 21, 206, 0.77);
+            text-shadow: 10px 5px 11px rgba(200, 21, 206, 0.77);;
+        }
+    }
+
+    &-anchor {
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
