@@ -12,7 +12,7 @@ import Box from "@mui/material/Box";
 function App() {
     return (
         <Router>
-            <Box sx={{maxHeight: "100%", height: "100%", position: 'relative'}}>
+            <Box sx={{maxHeight: "100%", height: "100%", position: 'relative', display:'grid'}}>
                 <Contact/>
 
                 <Grid size={{xl: 12}} sx={{height: '100%'}}>
