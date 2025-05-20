@@ -5,10 +5,14 @@ import Tile from "../../components/Tile/Tile.tsx";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
+import {usePreloadImage} from "../../hooks/usePreloadImage/usePreloadImage.tsx";
 
 function ProjectsPage() {
+    const bg = '/projects_bg.webp';
+    const bgLoaded = usePreloadImage(bg);
+
     return (
-        <Box sx={{backgroundImage: `url('../projects_bg.webp')`, backgroundSize: "cover", height: "100%"}}>
+        <Box sx={{background: bgLoaded ? `url(${bg})` : '#02022b', backgroundSize: "cover", height: "100%"}}>
             <Container maxWidth={false} sx={{height: "100%", zIndex: '99', position: "relative", padding:'50px 0'}}>
 
                 <Grid container={true} spacing={2} sx={{flexDirection: "center", mb: '40px', justifyContent: 'center'}}>

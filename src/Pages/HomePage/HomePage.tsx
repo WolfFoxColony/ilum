@@ -4,10 +4,14 @@ import ButtonOpen from "../../components/Buttons/ButtonPrimary.tsx";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
+import {usePreloadImage} from "../../hooks/usePreloadImage/usePreloadImage.tsx";
 
 function HomePage() {
+    const bg = '/bg.webp';
+    const bgLoaded = usePreloadImage(bg);
+
     return (
-        <Box sx={{backgroundImage: `url('../bg.webp')`, backgroundRepeat: "repeat", backgroundSize: "cover", overflow:'hidden', height: "100%"}}>
+        <Box sx={{background: bgLoaded ? `url(${bg})` : '#02022b', backgroundRepeat: "repeat", backgroundSize: "cover", overflow:'hidden', height: "100%"}}>
             <Container sx={{height: "100%", zIndex: '99', position: "relative", pt: '100px', pb: '50px'}}>
 
                 <Grid size={{xl: 0, sm: 2, xs: 2}}></Grid>
