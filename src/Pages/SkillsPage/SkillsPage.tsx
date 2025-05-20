@@ -3,47 +3,57 @@ import ButtonPrimary from "../../components/Buttons/ButtonPrimary.tsx";
 import Headline from "../../components/Headline/Headline.tsx";
 import Tile from "../../components/Tile/Tile.tsx";
 import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
 
 function SkillsPage() {
     return (
-        <>
-            <Grid container={true} spacing={4}>
-                <Grid size={{xl: 12}} sx={{padding: '40px 0'}}>
-                    <Headline>My Skills</Headline>
-                </Grid>
-                <Grid size={{xl: 3}}>
-                    <Tile>JavaScript</Tile>
-                    <Tile>TypeScript</Tile>
-                    <Tile>React</Tile>
-                    <Tile>Material UI</Tile>
-                </Grid>
+        <Box sx={{backgroundImage: `url('../skills-bg.webp')`, backgroundSize: "cover", padding:'40px 0', minHeight: "100%"}}>
+            <Container maxWidth={false} sx={{height: "100%", zIndex: '100', position: "relative", }}>
 
-                <Grid size={{xl: 3}}>
-                    <Tile>Redux(RTK)</Tile>
-                    <Tile>CSS/Sass/Scss/Less</Tile>
-                    <Tile>HTML/BEM</Tile>
-                </Grid>
+                <Grid container={true} spacing={2} sx={{flexDirection: "center", mb: '40px', justifyContent: 'center'}}>
+                    <Grid size={{xl: 12, xs: 12}}>
+                        <Headline>My Skills</Headline>
+                    </Grid>
 
-                <Grid size={{xl: 3}}>
-                    <Tile>Git/GitHub/GitLab</Tile>
-                    <Tile>npm</Tile>
-                    <Tile>JIRA/Asana</Tile>
-                    <Tile>Scrum</Tile>
-                </Grid>
+                    <Grid size={{xl: 0, sm: 1, xs: 2}}></Grid>
 
-                <Grid size={{xl: 3}} sx={{mb: '40px'}}>
-                    <Tile>Shopify platform/Liquid</Tile>
-                    <Tile>FreeMarker</Tile>
-                    <Tile>Figma/Avocode</Tile>
-                    <Tile>WebStorm/Intellij</Tile>
+                    <Grid size={{xl: 2, sm: 5, xs: 10}}>
+                        <Tile>JavaScript</Tile>
+                        <Tile>TypeScript</Tile>
+                        <Tile>React</Tile>
+                        <Tile>Material UI</Tile>
+                    </Grid>
+
+                    <Grid size={{xl: 2, sm: 5, xs: 10}}>
+                        <Tile>Redux(RTK)</Tile>
+                        <Tile>CSS, Scss, Less</Tile>
+                        <Tile>HTML(BEM)</Tile>
+                    </Grid>
+
+                    <Grid size={{xl: 0, sm: 1, xs: 2}}></Grid>
+
+                    <Grid size={{xl: 2, sm: 5, xs: 10}}>
+                        <Tile>Git, GitHub, GitLab</Tile>
+                        <Tile>npm</Tile>
+                        <Tile>JIRA, Asana</Tile>
+                        <Tile>Scrum</Tile>
+                    </Grid>
+
+                    <Grid size={{xl: 2, sm: 5, xs: 10}}>
+                        <Tile>Shopify, Liquid</Tile>
+                        <Tile>FreeMarker</Tile>
+                        <Tile>Figma, Avocode</Tile>
+                        <Tile>WebStorm, Intellij</Tile>
+                    </Grid>
                 </Grid>
 
                 <Grid size={{xl: 12}} container alignItems={'center'} justifyContent={'space-around'}>
                     <ButtonPrimary fontSize={'2rem'} path={-1} variant={'body1'}>Back</ButtonPrimary>
                     <ButtonPrimary fontSize={'2rem'} path={'/projects'} variant={'body1'}>Projects</ButtonPrimary>
                 </Grid>
-            </Grid>
-        </>
+            </Container>
+        </Box>
     );
 }
 

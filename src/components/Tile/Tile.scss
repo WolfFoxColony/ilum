@@ -4,14 +4,16 @@
     flex-direction: column;
 
     &-box {
-        padding: 20px;
+        padding: 10px;
         border: 1px solid #CEB7FF;
-        background-color: rgba(0, 0, 0, 0.2);
+        background-color: rgba(0, 0, 0, 0.3);
         color: transparent;
-        -webkit-text-stroke: 1px #e7a9f1;
-        font-size: 2rem;
+        -webkit-text-stroke: 1.5px #ef89ff;
+        font-size: 1.7rem;
         margin-bottom: 1rem;
         font-weight: 700;
+        letter-spacing: 1.5px;
+        word-spacing: normal;
 
         &:hover, &.tile-anchor:hover {
             box-shadow: 10px 5px 11px rgba(200, 21, 206, 0.77);

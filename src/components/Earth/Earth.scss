@@ -7,10 +7,10 @@
 .earth {
     position: fixed;
     bottom: -55%;
-    z-index: 10;
     animation: rotate 50s linear infinite;
     width: 100%;
     height: 100%;
+    z-index: 1;
 
     &_image {
         width: 100%;

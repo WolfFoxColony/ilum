@@ -13,7 +13,7 @@ function ButtonPrimary(props: any) {
                     border: '1px solid rgb(207 107 232)',
                     boxShadow: '10px 5px 11px rgba(200,21,206,0.77)',
                 }}>
-            <Headline fontSize={fontSize} variant={variant}>{children}</Headline>
+            <Headline mb={'0'} fontSize={fontSize} variant={variant}>{children}</Headline>
         </Button>
     );
 }

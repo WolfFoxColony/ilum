@@ -12,7 +12,7 @@ function Tile(props: TileProps) {
     const content = (
         <span className='tile'>
             <span className='tile-box font-primary'>
-                    {children}
+                {children}
             </span>
         </span>)
 
