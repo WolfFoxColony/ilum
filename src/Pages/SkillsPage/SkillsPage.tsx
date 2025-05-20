@@ -8,8 +8,8 @@ import Container from "@mui/material/Container";
 
 function SkillsPage() {
     return (
-        <Box sx={{backgroundImage: `url('../skills-bg.webp')`, backgroundSize: "cover", padding:'40px 0', minHeight: "100%"}}>
-            <Container maxWidth={false} sx={{height: "100%", zIndex: '100', position: "relative", }}>
+        <Box sx={{backgroundImage: `url('../skills-bg.webp')`, backgroundSize: "cover", height: "100%"}}>
+            <Container maxWidth={false} sx={{height: "100%", zIndex: '99', position: "relative", padding:'50px 0'}}>
 
                 <Grid container={true} spacing={2} sx={{flexDirection: "center", mb: '40px', justifyContent: 'center'}}>
                     <Grid size={{xl: 12, xs: 12}}>
@@ -22,11 +22,11 @@ function SkillsPage() {
                         <Tile>JavaScript</Tile>
                         <Tile>TypeScript</Tile>
                         <Tile>React</Tile>
-                        <Tile>Material UI</Tile>
+                        <Tile>Redux(RTK)</Tile>
                     </Grid>
 
                     <Grid size={{xl: 2, sm: 5, xs: 10}}>
-                        <Tile>Redux(RTK)</Tile>
+                        <Tile>Material UI</Tile>
                         <Tile>CSS, Scss, Less</Tile>
                         <Tile>HTML(BEM)</Tile>
                     </Grid>
@@ -34,7 +34,8 @@ function SkillsPage() {
                     <Grid size={{xl: 0, sm: 1, xs: 2}}></Grid>
 
                     <Grid size={{xl: 2, sm: 5, xs: 10}}>
-                        <Tile>Git, GitHub, GitLab</Tile>
+                        <Tile>Git</Tile>
+                        <Tile>GitHub, GitLab</Tile>
                         <Tile>npm</Tile>
                         <Tile>JIRA, Asana</Tile>
                         <Tile>Scrum</Tile>
@@ -44,7 +45,8 @@ function SkillsPage() {
                         <Tile>Shopify, Liquid</Tile>
                         <Tile>FreeMarker</Tile>
                         <Tile>Figma, Avocode</Tile>
-                        <Tile>WebStorm, Intellij</Tile>
+                        <Tile>WebStorm</Tile>
+                        <Tile>Intellij</Tile>
                     </Grid>
                 </Grid>
 

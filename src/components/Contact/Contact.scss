@@ -7,8 +7,10 @@
     position: absolute;
     top: 50%;
     left: 25px;
+    z-index: 100;
 
     &_img:hover  {
-        box-shadow: 5px 8px 13px rgba(200, 21, 206, 0.77);
+        scale: (1.1);
+        transition: scale 0.3s;
     }
 }

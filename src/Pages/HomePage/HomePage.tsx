@@ -7,8 +7,8 @@ import Container from "@mui/material/Container";
 
 function HomePage() {
     return (
-        <Box sx={{backgroundImage: `url('../bg.webp')`, backgroundRepeat: "repeat", backgroundSize: "cover", padding: '40px 0', overflow:'hidden'}}>
-            <Container sx={{height: "100vh", zIndex: '100', position: "relative", pt: '50px', pb: '50px'}}>
+        <Box sx={{backgroundImage: `url('../bg.webp')`, backgroundRepeat: "repeat", backgroundSize: "cover", overflow:'hidden', height: "100%"}}>
+            <Container sx={{height: "100%", zIndex: '99', position: "relative", pt: '100px', pb: '50px'}}>
 
                 <Grid size={{xl: 0, sm: 2, xs: 2}}></Grid>
 

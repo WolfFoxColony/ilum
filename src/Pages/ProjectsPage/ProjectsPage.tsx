@@ -8,8 +8,8 @@ import Container from "@mui/material/Container";
 
 function ProjectsPage() {
     return (
-        <Box sx={{backgroundImage: `url('../projects_bg.webp')`, backgroundSize: "cover", padding:'40px 0', minHeight: "100%"}}>
-            <Container maxWidth={false} sx={{height: "100%", zIndex: '100', position: "relative"}}>
+        <Box sx={{backgroundImage: `url('../projects_bg.webp')`, backgroundSize: "cover", height: "100%"}}>
+            <Container maxWidth={false} sx={{height: "100%", zIndex: '99', position: "relative", padding:'50px 0'}}>
 
                 <Grid container={true} spacing={2} sx={{flexDirection: "center", mb: '40px', justifyContent: 'center'}}>
                     <Grid size={{xl: 12, xs: 12}}>
@@ -22,10 +22,16 @@ function ProjectsPage() {
                         <Tile href={'https://pitchbook.com/'}>PitchBook</Tile>
                         <Tile href={'https://pitchbook.com/profiles/company/10472-86'}>McDonald's Profile</Tile>
                         <Tile href={'https://pitchbook.com/profiles/company/41082-40'}>Apple Profile</Tile>
+
+                    </Grid>
+
+                    <Grid size={{xl: 2, sm: 5, xs: 10}}>
                         <Tile href={'https://pitchbook.com/products'}>Products</Tile>
                         <Tile href={'https://pitchbook.com/solutions'}>Solutions</Tile>
                         <Tile href={'https://pitchbook.com/blog'}>Blog</Tile>
                     </Grid>
+
+                    <Grid size={{xl: 0, sm: 1, xs: 2}}></Grid>
 
                     <Grid size={{xl: 2, sm: 5, xs: 10}}>
                         <Tile href={'https://habit-tracker-react-ts.netlify.app/'}>Habit Tracker</Tile>
@@ -33,17 +39,9 @@ function ProjectsPage() {
                         <Tile href={'https://terraoutdoor.com/pages/showrooms'}>Showrooms</Tile>
                     </Grid>
 
-                    <Grid size={{xl: 0, sm: 1, xs: 2}}></Grid>
-
                     <Grid size={{xl: 2, sm: 5, xs: 10}}>
                         <Tile href={'https://tender-almeida-915c4d.netlify.app/'}>Todo List</Tile>
-                        <Tile href={'https://unruffled-mccarthy-a80f48.netlify.app/'}>Blog</Tile>
                         <Tile href={'https://gifted-shockley-841923.netlify.app/index.html'}>Choco Rocco Shop</Tile>
-                    </Grid>
-
-                    <Grid size={{xl: 2, sm: 5, xs: 10}}>
-                        <Tile href={'https://fervent-hodgkin-88c3ab.netlify.app/'}>Nava</Tile>
-                        <Tile href={'https://flamboyant-lamarr-01238c.netlify.app/'}>Barmy</Tile>
                     </Grid>
                 </Grid>
 
