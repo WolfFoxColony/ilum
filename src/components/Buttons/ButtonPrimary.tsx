@@ -12,6 +12,10 @@ function ButtonPrimary(props: any) {
                 sx={{
                     border: '1px solid rgb(207 107 232)',
                     boxShadow: '10px 5px 11px rgba(200,21,206,0.77)',
+                    '&:hover': {
+                        scale: '1.1',
+                        transition: 'scale 0.5s'
+                    }
                 }}>
             <Headline mb={'0'} fontSize={fontSize} variant={variant}>{children}</Headline>
         </Button>
