@@ -12,6 +12,7 @@ function ButtonPrimary(props: any) {
                 sx={{
                     border: '1px solid rgb(207 107 232)',
                     boxShadow: '10px 5px 11px rgba(200,21,206,0.77)',
+                    backgroundColor: 'rgba(0, 0, 0, 0.3)',
                     '&:hover': {
                         scale: '1.1',
                         transition: 'scale 0.5s'

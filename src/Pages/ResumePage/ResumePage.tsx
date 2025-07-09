@@ -6,15 +6,15 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import {usePreloadImage} from "../../hooks/usePreloadImage/usePreloadImage.tsx";
 
-function HomePage() {
-    const bg = 'bg-home.webp';
+function ResumePage() {
+    const bg = 'bg-secondary.webp';
     const bgLoaded = usePreloadImage(bg);
 
     const bgStyle = useMemo(() => ({
-        backgroundImage: bgLoaded ? `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url(${bg})` : 'none',
+        backgroundImage: bgLoaded ? `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${bg})` : 'none',
         backgroundSize: 'cover',
         height: '100%',
-        overflow:'hidden',
+        overflow: 'hidden',
         backgroundRepeat: "repeat"
     }), [bgLoaded, bg]);
 
@@ -23,15 +23,19 @@ function HomePage() {
             <Container sx={{height: "100%", zIndex: '99', position: "relative", pt: '50px', pb: '50px'}}>
 
                 <Grid container={true} spacing={2} justifyContent="center" sx={{mb: '40px', height: '80%'}}>
-                    <Grid size={{xl: 11, xs: 7}}  justifyContent="center" direction="column" container alignItems="center">
-                        <Headline>Hello fellow galaxy member</Headline>
+                    <Grid size={{xl: 11, xs: 7}} justifyContent="center" direction="column" container alignItems="center">
+                        <Headline>
+                            <a style={{textDecoration:'none'}} target='_blank' href={'https://drive.google.com/file/d/1a8OYZ1lzQ-QwSaq2_cc58qYzvPEwQf0j/view?usp=sharing'}>
+                                View Full Resume
+                            </a>
+                        </Headline>
 
-                        <Headline fontSize={"2rem"}>Welcome to my space!</Headline>
                     </Grid>
                 </Grid>
 
-                <Grid justifyContent="center" direction="row" container alignItems="center">
-                    <ButtonOpen path={"/skills"} variant={"h4"}>OPEN</ButtonOpen>
+                <Grid size={{xl: 12}} container alignItems={'center'} justifyContent={'space-around'}>
+                    <ButtonOpen path={"/"} variant={"h4"}>HOME</ButtonOpen>
+                    <ButtonOpen path={"/certificates"} variant={"h4"}>Certificates</ButtonOpen>
                 </Grid>
 
             </Container>
@@ -39,4 +43,4 @@ function HomePage() {
     );
 }
 
-export default HomePage;
+export default ResumePage;

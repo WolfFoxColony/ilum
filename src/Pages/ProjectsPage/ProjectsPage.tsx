@@ -8,11 +8,11 @@ import Container from "@mui/material/Container";
 import {usePreloadImage} from "../../hooks/usePreloadImage/usePreloadImage.tsx";
 
 function ProjectsPage() {
-    const bg = '/projects_bg.webp';
+    const bg = 'bg-primary.webp';
     const bgLoaded = usePreloadImage(bg);
 
     const bgStyle = useMemo(() => ({
-        background: bgLoaded ? `url(${bg})` : '#02022b',
+        backgroundImage: bgLoaded ? `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url(${bg})` : 'none',
         backgroundSize: 'cover',
         height: '100%',
     }), [bgLoaded, bg]);
@@ -60,6 +60,7 @@ function ProjectsPage() {
 
                 <Grid size={{xl: 12}} container alignItems={'center'} justifyContent={'space-around'}>
                     <ButtonPrimary path={-1} variant={'body1'} fontSize={'2rem'}>Back</ButtonPrimary>
+                    <ButtonPrimary fontSize={'2rem'} path={'/resume'} variant={'body1'}>Resume</ButtonPrimary>
                 </Grid>
             </Container>
         </Box>

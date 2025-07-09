@@ -8,6 +8,8 @@ import ProjectsPage from "./Pages/ProjectsPage/ProjectsPage.tsx";
 import Earth from "./components/Earth/Earth.tsx";
 import SkillsPage from "./Pages/SkillsPage/SkillsPage.tsx";
 import Box from "@mui/material/Box";
+import ResumePage from "./Pages/ResumePage/ResumePage.tsx";
+import CertificatesPage from "./Pages/CertificatesPage/CertificatesPage.tsx";
 
 function App() {
     return (
@@ -20,6 +22,8 @@ function App() {
                         <Route path="/" element={<HomePage/>}/>
                         <Route path="/projects" element={<ProjectsPage/>}/>
                         <Route path="/skills" element={<SkillsPage/>}/>
+                        <Route path="/resume" element={<ResumePage/>}/>
+                        <Route path="/certificates" element={<CertificatesPage/>}/>
                     </Routes>
                 </Grid>
 

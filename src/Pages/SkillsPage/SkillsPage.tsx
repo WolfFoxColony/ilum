@@ -8,18 +8,19 @@ import Container from "@mui/material/Container";
 import {usePreloadImage} from "../../hooks/usePreloadImage/usePreloadImage.tsx";
 
 function SkillsPage() {
-    const bg = '/skills_bg.webp';
+    const bg = '/3.webp';
     const bgLoaded = usePreloadImage(bg);
 
     const bgStyle = useMemo(() => ({               //returns the same object as long as the dependencies(bgLoaded, bg) have not changed.
-        background: bgLoaded ? `url(${bg})` : '#02022b',
+        backgroundImage: bgLoaded ? `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url(${bg})` : 'none',
         backgroundSize: 'cover',
         height: '100%',
     }), [bgLoaded, bg]);
 
     return (
         <Box sx={bgStyle}>
-            <Container maxWidth={false} sx={{height: "100%", zIndex: '99', position: "relative", padding:'50px 0'}}>       //'sx' is static — it does not use variables, does not depend on state, props, or any conditions — it is not necessary to wrap it in useMemo
+            {/*'sx' is static — it does not use variables, does not depend on state, props, or any conditions — it is not necessary to wrap it in useMemo*/}
+            <Container maxWidth={false} sx={{height: "100%", zIndex: '99', position: "relative", padding:'50px 0'}}>
 
                 <Grid container={true} spacing={2} justifyContent="center" sx={{mb: '40px', mr:' 20px', ml:' 20px'}}>
                     <Grid size={{xl: 12, xs: 12}}>
