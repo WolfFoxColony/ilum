@@ -5,7 +5,7 @@ import './Contact.scss';
 
 const Contact = () => (
     <div className={'contact'}>
-        <a style={{marginBottom: '15px'}} target={'_blank'} href={'https://www.linkedin.com/in/karina-furt-a396311a8/'}>
+        <a style={{marginBottom: '15px'}} target={'_blank'} href={'https://www.linkedin.com/in/karina-ft/'}>
             <img className={'contact_img'} src={gitHub} alt="gitHub"/>
         </a>
 

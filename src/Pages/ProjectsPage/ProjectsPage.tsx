@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import ButtonPrimary from "../../components/Buttons/ButtonPrimary.tsx";
 import Headline from "../../components/Headline/Headline.tsx";
 import Tile from "../../components/Tile/Tile.tsx";
@@ -11,8 +11,14 @@ function ProjectsPage() {
     const bg = '/projects_bg.webp';
     const bgLoaded = usePreloadImage(bg);
 
+    const bgStyle = useMemo(() => ({
+        background: bgLoaded ? `url(${bg})` : '#02022b',
+        backgroundSize: 'cover',
+        height: '100%',
+    }), [bgLoaded, bg]);
+
     return (
-        <Box sx={{background: bgLoaded ? `url(${bg})` : '#02022b', backgroundSize: "cover", height: "100%"}}>
+        <Box sx={bgStyle}>
             <Container maxWidth={false} sx={{height: "100%", zIndex: '99', position: "relative", padding:'50px 0'}}>
 
                 <Grid container={true} spacing={2} justifyContent="center" sx={{ mb: '40px', mr:' 20px', ml:' 20px'}}>

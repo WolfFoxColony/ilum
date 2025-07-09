@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import Headline from "../../components/Headline/Headline.tsx";
 import ButtonOpen from "../../components/Buttons/ButtonPrimary.tsx";
 import Grid from "@mui/material/Grid";
@@ -10,8 +10,16 @@ function HomePage() {
     const bg = '/bg.webp';
     const bgLoaded = usePreloadImage(bg);
 
+    const bgStyle = useMemo(() => ({
+        background: bgLoaded ? `url(${bg})` : '#02022b',
+        backgroundSize: 'cover',
+        height: '100%',
+        overflow:'hidden',
+        backgroundRepeat: "repeat"
+    }), [bgLoaded, bg]);
+
     return (
-        <Box sx={{background: bgLoaded ? `url(${bg})` : '#02022b', backgroundRepeat: "repeat", backgroundSize: "cover", overflow:'hidden', height: "100%"}}>
+        <Box sx={bgStyle}>
             <Container sx={{height: "100%", zIndex: '99', position: "relative", pt: '50px', pb: '50px'}}>
 
                 <Grid container={true} spacing={2} justifyContent="center" sx={{mb: '40px', height: '80%'}}>
