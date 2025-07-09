@@ -8,11 +8,11 @@ import Container from "@mui/material/Container";
 import {usePreloadImage} from "../../hooks/usePreloadImage/usePreloadImage.tsx";
 
 function SkillsPage() {
-    const bg = '/3.webp';
+    const bg = 'bg-skills.webp';
     const bgLoaded = usePreloadImage(bg);
 
     const bgStyle = useMemo(() => ({               //returns the same object as long as the dependencies(bgLoaded, bg) have not changed.
-        backgroundImage: bgLoaded ? `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url(${bg})` : 'none',
+        backgroundImage: bgLoaded ? `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url(${bg})` : '#02022b',
         backgroundSize: 'cover',
         height: '100%',
     }), [bgLoaded, bg]);
