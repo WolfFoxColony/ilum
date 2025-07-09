@@ -24,7 +24,7 @@ function HomePage() {
 
                 <Grid container={true} spacing={2} justifyContent="center" sx={{mb: '40px', height: '80%'}}>
                     <Grid size={{xl: 11, xs: 7}}  justifyContent="center" direction="column" container alignItems="center">
-                        <Headline fontSize={"3.5rem"}>Hello fellow galaxy member</Headline>
+                        <Headline>Hello fellow galaxy member</Headline>
 
                         <Headline fontSize={"2rem"}>Welcome to my space!</Headline>
                     </Grid>

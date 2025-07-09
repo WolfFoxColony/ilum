@@ -19,7 +19,7 @@ function SkillsPage() {
 
     return (
         <Box sx={bgStyle}>
-            <Container maxWidth={false} sx={{height: "100%", zIndex: '99', position: "relative", padding:'50px 0'}}>
+            <Container maxWidth={false} sx={{height: "100%", zIndex: '99', position: "relative", padding:'50px 0'}}>       //'sx' is static — it does not use variables, does not depend on state, props, or any conditions — it is not necessary to wrap it in useMemo
 
                 <Grid container={true} spacing={2} justifyContent="center" sx={{mb: '40px', mr:' 20px', ml:' 20px'}}>
                     <Grid size={{xl: 12, xs: 12}}>
