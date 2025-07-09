@@ -12,19 +12,17 @@ function HomePage() {
 
     return (
         <Box sx={{background: bgLoaded ? `url(${bg})` : '#02022b', backgroundRepeat: "repeat", backgroundSize: "cover", overflow:'hidden', height: "100%"}}>
-            <Container sx={{height: "100%", zIndex: '99', position: "relative", pt: '100px', pb: '50px'}}>
+            <Container sx={{height: "100%", zIndex: '99', position: "relative", pt: '50px', pb: '50px'}}>
 
-                <Grid size={{xl: 0, sm: 2, xs: 2}}></Grid>
-
-                <Grid container={true} spacing={2} sx={{flexDirection: "center", mb: '40px', justifyContent: 'center'}}>
-                    <Grid size={{xl: 11, xs: 10}} justifyContent="center" direction="column" container alignItems="center" sx={{height: '70%'}}>
-                        <Headline fontSize={"5rem"}>Hello fellow galaxy member</Headline>
+                <Grid container={true} spacing={2} justifyContent="center" sx={{mb: '40px', height: '80%'}}>
+                    <Grid size={{xl: 11, xs: 7}}  justifyContent="center" direction="column" container alignItems="center">
+                        <Headline fontSize={"3.5rem"}>Hello fellow galaxy member</Headline>
 
                         <Headline fontSize={"2rem"}>Welcome to my space!</Headline>
                     </Grid>
                 </Grid>
 
-                <Grid justifyContent="center" direction="row" container alignItems="center" sx={{height: '30%'}}>
+                <Grid justifyContent="center" direction="row" container alignItems="center">
                     <ButtonOpen path={"/skills"} variant={"h4"}>OPEN</ButtonOpen>
                 </Grid>
 

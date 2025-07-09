@@ -15,7 +15,7 @@ function App() {
             <Box sx={{maxHeight: "100%", height: "100%", position: 'relative', display:'grid'}}>
                 <Contact/>
 
-                <Grid size={{xl: 12}} sx={{height: '100%'}}>
+                <Grid size={{xl: 11}} sx={{height: '100%'}}>
                     <Routes>
                         <Route path="/" element={<HomePage/>}/>
                         <Route path="/projects" element={<ProjectsPage/>}/>

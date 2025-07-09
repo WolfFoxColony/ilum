@@ -2,7 +2,7 @@ import React from 'react';
 import Typography from "@mui/material/Typography";
 
 function Headline(props: any) {
-    const {children, fontSize, variant='h2', mb='30px'} = props;
+    const {children, fontSize='3.5rem', variant='h2', mb='30px'} = props;
     const customFont = "'Rowdies', sans-serif";  // sans-serif - fallback(alternative font)
 
     return (

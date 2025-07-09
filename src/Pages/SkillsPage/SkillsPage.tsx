@@ -15,7 +15,7 @@ function SkillsPage() {
         <Box sx={{background: bgLoaded ? `url(${bg})` : '#02022b', backgroundSize: "cover", height: "100%"}}>
             <Container maxWidth={false} sx={{height: "100%", zIndex: '99', position: "relative", padding:'50px 0'}}>
 
-                <Grid container={true} spacing={2} sx={{flexDirection: "center", mb: '40px', justifyContent: 'center'}}>
+                <Grid container={true} spacing={2} justifyContent="center" sx={{mb: '40px', mr:' 20px', ml:' 20px'}}>
                     <Grid size={{xl: 12, xs: 12}}>
                         <Headline>My Skills</Headline>
                     </Grid>
@@ -28,6 +28,8 @@ function SkillsPage() {
                         <Tile>React</Tile>
                         <Tile>Redux(RTK)</Tile>
                     </Grid>
+
+                    <Grid size={{xl: 0, sm: 0, xs: 2}}></Grid>
 
                     <Grid size={{xl: 2, sm: 5, xs: 10}}>
                         <Tile>Material UI</Tile>
@@ -44,6 +46,8 @@ function SkillsPage() {
                         <Tile>JIRA, Asana</Tile>
                         <Tile>Scrum</Tile>
                     </Grid>
+
+                    <Grid size={{xl: 0, sm: 0, xs: 2}}></Grid>
 
                     <Grid size={{xl: 2, sm: 5, xs: 10}}>
                         <Tile>Shopify, Liquid</Tile>

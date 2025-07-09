@@ -15,21 +15,22 @@ function ProjectsPage() {
         <Box sx={{background: bgLoaded ? `url(${bg})` : '#02022b', backgroundSize: "cover", height: "100%"}}>
             <Container maxWidth={false} sx={{height: "100%", zIndex: '99', position: "relative", padding:'50px 0'}}>
 
-                <Grid container={true} spacing={2} sx={{flexDirection: "center", mb: '40px', justifyContent: 'center'}}>
+                <Grid container={true} spacing={2} justifyContent="center" sx={{ mb: '40px', mr:' 20px', ml:' 20px'}}>
                     <Grid size={{xl: 12, xs: 12}}>
                         <Headline>My projects</Headline>
                     </Grid>
 
                     <Grid size={{xl: 0, sm: 1, xs: 2}}></Grid>
 
-                    <Grid size={{xl: 2, sm: 5, xs: 10}}>
+                    <Grid size={{xl: 2, sm: 5, xs: 10}} sx={{maxWidth: '400px'}}>
                         <Tile href={'https://pitchbook.com/'}>PitchBook</Tile>
                         <Tile href={'https://pitchbook.com/profiles/company/10472-86'}>McDonald's Profile</Tile>
                         <Tile href={'https://pitchbook.com/profiles/company/41082-40'}>Apple Profile</Tile>
-
                     </Grid>
 
-                    <Grid size={{xl: 2, sm: 5, xs: 10}}>
+                    <Grid size={{xl: 0, sm: 1, xs: 2}}></Grid>
+
+                    <Grid size={{xl: 2, sm: 5, xs: 10}} sx={{maxWidth: '400px'}}>
                         <Tile href={'https://pitchbook.com/products'}>Products</Tile>
                         <Tile href={'https://pitchbook.com/solutions'}>Solutions</Tile>
                         <Tile href={'https://pitchbook.com/blog'}>Blog</Tile>
@@ -37,13 +38,15 @@ function ProjectsPage() {
 
                     <Grid size={{xl: 0, sm: 1, xs: 2}}></Grid>
 
-                    <Grid size={{xl: 2, sm: 5, xs: 10}}>
+                    <Grid size={{xl: 2, sm: 5, xs: 10}} sx={{maxWidth: '400px'}}>
                         <Tile href={'https://habit-tracker-react-ts.netlify.app/'}>Habit Tracker</Tile>
                         <Tile href={'https://terraoutdoor.com/pages/shop-by-material'}>Material Integrity</Tile>
                         <Tile href={'https://terraoutdoor.com/pages/showrooms'}>Showrooms</Tile>
                     </Grid>
 
-                    <Grid size={{xl: 2, sm: 5, xs: 10}}>
+                    <Grid size={{xl: 0, sm: 1, xs: 2}}></Grid>
+
+                    <Grid size={{xl: 2, sm: 5, xs: 10}} sx={{maxWidth: '400px'}}>
                         <Tile href={'https://tender-almeida-915c4d.netlify.app/'}>Todo List</Tile>
                         <Tile href={'https://gifted-shockley-841923.netlify.app/index.html'}>Choco Rocco Shop</Tile>
                     </Grid>
