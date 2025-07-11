@@ -67,7 +67,7 @@ function SkillsPage() {
                 </Grid>
 
                 <Grid size={{xl: 12}} container alignItems={'center'} justifyContent={'space-around'}>
-                    <ButtonPrimary fontSize={'2rem'} path={-1} variant={'body1'}>Back</ButtonPrimary>
+                    <ButtonPrimary fontSize={'2rem'} path={'/'} variant={'body1'}>Back</ButtonPrimary>
                     <ButtonPrimary fontSize={'2rem'} path={'/projects'} variant={'body1'}>Projects</ButtonPrimary>
                 </Grid>
             </Container>
