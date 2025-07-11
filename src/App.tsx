@@ -1,14 +1,14 @@
 import React from 'react';
 import './assets/styles/global.scss'
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import HomePage from './Pages/HomePage/HomePage.tsx';
+import HomePage from './pages/HomePage/HomePage.tsx';
 import Contact from "./components/Contact/Contact.tsx";
 import Grid from "@mui/material/Grid";
-import ProjectsPage from "./Pages/ProjectsPage/ProjectsPage.tsx";
+import ProjectsPage from "./pages/ProjectsPage/ProjectsPage.tsx";
 import Earth from "./components/Earth/Earth.tsx";
-import SkillsPage from "./Pages/SkillsPage/SkillsPage.tsx";
+import SkillsPage from "./pages/SkillsPage/SkillsPage.tsx";
 import Box from "@mui/material/Box";
-import ResumePage from "./Pages/ResumePage/ResumePage.tsx";
+import ResumePage from "./pages/ResumePage/ResumePage.tsx";
 
 function App() {
     return (

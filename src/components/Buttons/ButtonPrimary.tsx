@@ -1,12 +1,12 @@
 import React from 'react';
-import {useNavigate} from "react-router-dom";
+import {To, useNavigate} from "react-router-dom";
 import Button from "@mui/material/Button";
 import Headline from "../Headline/Headline.tsx";
 
 type ButtonPrimaryType = {
     children: any,
     variant: string,
-    path?: string | number | undefined ,
+    path?: To,
     fontSize?: string,
     click?: any,
 }
