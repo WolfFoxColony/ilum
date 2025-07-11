@@ -12,9 +12,10 @@ function SkillsPage() {
     const bgLoaded = usePreloadImage(bg);
 
     const bgStyle = useMemo(() => ({               //returns the same object as long as the dependencies(bgLoaded, bg) have not changed.
-        backgroundImage: bgLoaded ? `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url(${bg})` : '#02022b',
+        background: bgLoaded ? `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url(${bg})` : '#050e1e',
         backgroundSize: 'cover',
         height: '100%',
+        transition: 'background 0.8s ease-in-out',
     }), [bgLoaded, bg]);
 
     return (

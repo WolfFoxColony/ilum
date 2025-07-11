@@ -12,9 +12,10 @@ function ProjectsPage() {
     const bgLoaded = usePreloadImage(bg);
 
     const bgStyle = useMemo(() => ({
-        backgroundImage: bgLoaded ? `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url(${bg})` : '#02022b',
+        backgroundImage: bgLoaded ? `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url(${bg})` : '#050e1e',
         backgroundSize: 'cover',
         height: '100%',
+        transition: 'background 0.4s ease-in-out',
     }), [bgLoaded, bg]);
 
     return (

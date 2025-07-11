@@ -1,40 +1,33 @@
 import React, {useMemo} from 'react';
 import Headline from "../../components/Headline/Headline.tsx";
-import ButtonOpen from "../../components/Buttons/ButtonPrimary.tsx";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import {usePreloadImage} from "../../hooks/usePreloadImage/usePreloadImage.tsx";
-import ButtonPrimary from "../../components/Buttons/ButtonPrimary.tsx";
+import SwiperSlider from "../../components/Swiper/Swiper.tsx";
 
 function CertificatesPage() {
     const bg = '/bg-certificates.webp';
     const bgLoaded = usePreloadImage(bg);
 
     const bgStyle = useMemo(() => ({
-        backgroundImage: bgLoaded ? `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${bg})` : '#02022b',
+        backgroundImage: bgLoaded ? `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${bg})` : '#050e1e',
         backgroundSize: 'cover',
-        height: '100%',
         overflow: 'hidden',
-        backgroundRepeat: "repeat"
+        backgroundRepeat: "repeat",
+        transition: 'background 0.4s ease-in-out',
     }), [bgLoaded, bg]);
 
     return (
-        <Box sx={bgStyle}>
-            <Container sx={{height: "100%", zIndex: '99', position: "relative", pt: '50px', pb: '50px'}}>
+        <Box sx={bgStyle} id={'certificates-page'}>
+            <Container sx={{height: "100%", zIndex: '99', position: "relative", pt: '100px', pb: '100px'}}>
 
                 <Grid container={true} spacing={2} justifyContent="center" sx={{mb: '40px', height: '80%'}}>
-                    <Grid size={{xl: 11, xs: 7}} justifyContent="center" direction="column" container alignItems="center">
-                        <Headline>
-                            Certificates
-                        </Headline>
+                    <Grid size={{xl: 11, xs: 7}} justifyContent="center" direction="column" flexWrap='wrap' container alignItems="center">
+                        <Headline fontSize='2rem'>Certificates</Headline>
 
+                        <SwiperSlider/>
                     </Grid>
-                </Grid>
-
-                <Grid justifyContent="space-around" direction="row" container>
-                    <ButtonPrimary fontSize={'2rem'} path={-1} variant={'body1'}>Back</ButtonPrimary>
-                    <ButtonOpen path={"/"} variant={"h4"}>HOME</ButtonOpen>
                 </Grid>
 
             </Container>

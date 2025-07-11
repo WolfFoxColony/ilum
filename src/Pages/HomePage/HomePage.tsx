@@ -1,21 +1,22 @@
 import React, {useMemo} from 'react';
 import Headline from "../../components/Headline/Headline.tsx";
-import ButtonOpen from "../../components/Buttons/ButtonPrimary.tsx";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import {usePreloadImage} from "../../hooks/usePreloadImage/usePreloadImage.tsx";
+import ButtonPrimary from "../../components/Buttons/ButtonPrimary.tsx";
 
 function HomePage() {
     const bg = 'bg-home.webp';
     const bgLoaded = usePreloadImage(bg);
 
     const bgStyle = useMemo(() => ({
-        backgroundImage: bgLoaded ? `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url(${bg})` : '#02022b',
+        backgroundImage: bgLoaded ? `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url(${bg})` : '#050e1e',
         backgroundSize: 'cover',
         height: '100%',
         overflow:'hidden',
-        backgroundRepeat: "repeat"
+        backgroundRepeat: "repeat",
+        transition: 'background 0.4s ease-in-out',
     }), [bgLoaded, bg]);
 
     return (
@@ -31,7 +32,7 @@ function HomePage() {
                 </Grid>
 
                 <Grid justifyContent="center" direction="row" container alignItems="center">
-                    <ButtonOpen path={"/skills"} variant={"h4"}>OPEN</ButtonOpen>
+                    <ButtonPrimary path={"/skills"} variant={"h4"}>OPEN</ButtonPrimary>
                 </Grid>
 
             </Container>
