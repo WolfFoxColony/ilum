@@ -9,7 +9,7 @@ interface SwiperSliderI {
     data: {src: string}[];
 }
 
-const SwiperSlider = (props: SwiperSliderI) => {
+const SwiperSlider = React.memo((props: SwiperSliderI) => {            //memo - avoid unnecessary renders
     const {data} = props;
 
     return (
@@ -32,5 +32,5 @@ const SwiperSlider = (props: SwiperSliderI) => {
             })}
         </Swiper>
     )
-}
+})
 export default SwiperSlider;

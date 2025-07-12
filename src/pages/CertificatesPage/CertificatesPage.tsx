@@ -16,6 +16,7 @@ function CertificatesPage() {
         overflow: 'hidden',
         backgroundRepeat: "repeat",
         transition: 'background 0.4s ease-in-out',
+        height: '100vh',
     }), [bgLoaded, bg]);
 
     const sliderImages= [
