@@ -5,7 +5,13 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import "./Swiper.scss";
 
-const SwiperSlider = () => {
+interface SwiperSliderI {
+    data: {src: string}[];
+}
+
+const SwiperSlider = (props: SwiperSliderI) => {
+    const {data} = props;
+
     return (
         <Swiper
             className="container swiper-slider"
@@ -16,23 +22,14 @@ const SwiperSlider = () => {
             pagination={{clickable: true}}
             scrollbar={{draggable: true}}
         >
-            <SwiperSlide className="swiper-slider__slide">
-                <div className="swiper-slider__slide-block">
-                    <img className="swiper-slider__slide-img" src="/spd.webp"/>
-                </div>
-            </SwiperSlide>
-
-            <SwiperSlide className="swiper-slider__slide">
-                <div className="swiper-slider__slide-block">
-                    <img className="swiper-slider__slide-img" src="/prometheus.webp"/>
-                </div>
-            </SwiperSlide>
-
-            <SwiperSlide className="swiper-slider__slide">
-                <div className="swiper-slider__slide-block">
-                    <img className="swiper-slider__slide-img" src="/andersen.webp"/>
-                </div>
-            </SwiperSlide>
+            {data.map((item) => {
+                return (
+                    <SwiperSlide className="swiper-slider__slide">
+                        <div className="swiper-slider__slide-block">
+                            <img className="swiper-slider__slide-img" src={item.src}/>
+                        </div>
+                    </SwiperSlide>)
+            })}
         </Swiper>
     )
 }

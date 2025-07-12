@@ -18,6 +18,21 @@ function CertificatesPage() {
         transition: 'background 0.4s ease-in-out',
     }), [bgLoaded, bg]);
 
+    const sliderImages= [
+        {
+            'src': '/spd.webp'
+        },
+        {
+            'src': '/ICP-Certification.webp'
+        },
+        {
+            'src': '/prometheus.webp'
+        },
+        {
+            'src': '/andersen.webp'
+        },
+    ]
+
     return (
         <Box sx={bgStyle} id={'certificates-page'}>
             <Container sx={{height: "100%", zIndex: '99', position: "relative", pt: '100px', pb: '100px'}}>
@@ -26,7 +41,7 @@ function CertificatesPage() {
                     <Grid size={{xl: 11, xs: 7}} justifyContent="center" direction="column" flexWrap='wrap' container alignItems="center">
                         <Headline fontSize='2rem'>Certificates</Headline>
 
-                        <SwiperSlider/>
+                        <SwiperSlider data={sliderImages}/>
                     </Grid>
                 </Grid>
 
