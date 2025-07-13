@@ -31,7 +31,7 @@ function ResumePage() {
                     <Grid container={true} spacing={2} justifyContent="center" sx={{mb: '40px', height: '80%'}}>
                         <Grid size={{xl: 11, xs: 7}} justifyContent="center" direction="column" container alignItems="center">
                             <Headline>
-                                <a style={{ color:'#8888', paddingBottom: '5px', textDecorationLine: 'overline'}} target='_blank'
+                                <a style={{ color:'#8888', paddingBottom: '5px', textDecorationLine: 'overline', lineHeight:1.5}} target='_blank'
                                    href={'https://drive.google.com/file/d/1csxY691eogaHcT8LEPmrOQAdFq_eLauy/view?usp=sharing'}>
                                     View Full Resume &#9650;
                                 </a>

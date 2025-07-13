@@ -5,6 +5,7 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import {usePreloadImage} from "../../hooks/usePreloadImage/usePreloadImage.tsx";
 import SwiperSlider from "../../components/Swiper/Swiper.tsx";
+import './CertificatesPage.scss'
 
 function CertificatesPage() {
     const bg = '/bg-certificates.webp';
@@ -12,11 +13,6 @@ function CertificatesPage() {
 
     const bgStyle = useMemo(() => ({
         backgroundImage: bgLoaded ? `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${bg})` : '#050e1e',
-        backgroundSize: 'cover',
-        overflow: 'hidden',
-        backgroundRepeat: "repeat",
-        transition: 'background 0.4s ease-in-out',
-        height: '100vh',
     }), [bgLoaded, bg]);
 
     const sliderImages= [
@@ -35,13 +31,12 @@ function CertificatesPage() {
     ]
 
     return (
-        <Box sx={bgStyle} id={'certificates-page'}>
+        <Box sx={bgStyle} className={'certificates'} id={'certificates-page'}>
             <Container sx={{height: "100%", zIndex: '99', position: "relative", pt: '100px', pb: '100px'}}>
 
-                <Grid container={true} spacing={2} justifyContent="center" sx={{mb: '40px', height: '80%'}}>
+                <Grid container={true} spacing={2} justifyContent="center" sx={{height: '80%'}}>
                     <Grid size={{xl: 11, xs: 7}} justifyContent="center" direction="column" flexWrap='wrap' container alignItems="center">
                         <Headline fontSize='2rem'>Certificates</Headline>
-
                         <SwiperSlider data={sliderImages}/>
                     </Grid>
                 </Grid>
